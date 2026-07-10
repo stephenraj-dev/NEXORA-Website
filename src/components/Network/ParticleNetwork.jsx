@@ -96,21 +96,12 @@ const ParticleNetwork = () => {
         this.currentY = lerp(this.currentY, this.targetY, 0.08);
       }
 
-      draw(ctx, isDark) {
+      draw(ctx, isDark, globalGradient) {
         ctx.beginPath();
         ctx.moveTo(width / 2, height);
         ctx.lineTo(this.currentX, this.currentY);
         
-        const gradient = ctx.createLinearGradient(width/2, height, this.currentX, this.currentY);
-        if (isDark) {
-          gradient.addColorStop(0, 'rgba(99, 102, 241, 0.8)'); // Indigo-500
-          gradient.addColorStop(1, 'rgba(56, 189, 248, 0.2)'); // Light Blue
-        } else {
-          gradient.addColorStop(0, 'rgba(79, 70, 229, 0.8)'); // Indigo-600
-          gradient.addColorStop(1, 'rgba(14, 165, 233, 0.15)'); // Sky Blue
-        }
-        
-        ctx.strokeStyle = gradient;
+        ctx.strokeStyle = globalGradient;
         ctx.lineWidth = 1.2;
         ctx.stroke();
 
@@ -129,14 +120,24 @@ const ParticleNetwork = () => {
     };
 
     const animate = () => {
-      if (!isVisible) return; // Completely stop rendering if not on screen
+      if (!isVisible) return; 
 
       ctx.clearRect(0, 0, width, height);
       const isDark = document.documentElement.classList.contains('dark');
       
+      // Performance Fix: Create ONE gradient per frame instead of 400
+      const globalGradient = ctx.createLinearGradient(width/2, height, width/2, 0);
+      if (isDark) {
+        globalGradient.addColorStop(0, 'rgba(99, 102, 241, 0.8)'); // Indigo-500
+        globalGradient.addColorStop(1, 'rgba(56, 189, 248, 0.2)'); // Light Blue
+      } else {
+        globalGradient.addColorStop(0, 'rgba(79, 70, 229, 0.8)'); // Indigo-600
+        globalGradient.addColorStop(1, 'rgba(14, 165, 233, 0.15)'); // Sky Blue
+      }
+      
       particles.forEach(p => {
         p.update();
-        p.draw(ctx, isDark);
+        p.draw(ctx, isDark, globalGradient);
       });
       
       animationFrameId = requestAnimationFrame(animate);

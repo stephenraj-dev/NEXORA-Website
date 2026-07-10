@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import VideoIntro from '../../components/Hero/VideoIntro';
 import Hero from '../../components/Hero/Hero';
 import TrustedCompanies from '../../components/TrustedCompanies/TrustedCompanies';
 import AboutSection from '../../components/About/AboutSection';
@@ -20,20 +21,25 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="flex flex-col w-full">
-      <Hero />
-      <TrustedCompanies />
-      <AboutSection />
-      <ServicesSection />
-      <WhyChooseUs />
-      <Process />
-      <ProductsSection />
-      <NetworkSection />
-      <LiveDashboardPreview />
-      <Statistics />
-      <Testimonials />
-      <FAQ />
-      <CTA />
+    <div className="flex flex-col w-full relative bg-transparent">
+      <VideoIntro />
+      
+      {/* Content wrapper that slides over the sticky video */}
+      <div className="relative z-10 w-full bg-white dark:bg-[#0B1120] shadow-2xl">
+        <Hero />
+        <TrustedCompanies />
+        <AboutSection />
+        <ServicesSection />
+        <WhyChooseUs />
+        <Process />
+        <ProductsSection />
+        <NetworkSection />
+        <LiveDashboardPreview />
+        <Statistics />
+        <Testimonials />
+        <FAQ />
+        <CTA />
+      </div>
     </div>
   );
 };

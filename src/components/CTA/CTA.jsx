@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CTA = () => {
   return (
@@ -23,10 +24,10 @@ const CTA = () => {
             <p className="text-indigo-100 text-lg mb-10 max-w-2xl mx-auto">
               Join industry leaders who trust NEXORA to deliver robust, scalable, and beautifully designed digital solutions.
             </p>
-            <button className="px-8 py-4 bg-white text-indigo-600 hover:bg-slate-50 rounded-xl font-bold transition-colors shadow-xl flex items-center justify-center gap-2 mx-auto group">
-              Get in Touch
-              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-            </button>
+            <Link to="/contact" className="px-8 py-4 bg-white text-indigo-600 hover:bg-slate-50 rounded-xl font-bold transition-colors shadow-xl flex items-center justify-center gap-2 mx-auto group w-max">
+              Start Your Transformation
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </motion.div>
       </div>
