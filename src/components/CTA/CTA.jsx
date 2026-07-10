@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const CTA = () => {
   return (
-    <section className="py-24 bg-white dark:bg-[#0B1120]">
+    <section className="py-24 bg-white dark:bg-[#1A1514]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -24,9 +24,11 @@ const CTA = () => {
             <p className="text-indigo-100 text-lg mb-10 max-w-2xl mx-auto">
               Join industry leaders who trust NEXORA to deliver robust, scalable, and beautifully designed digital solutions.
             </p>
-            <Link to="/contact" className="px-8 py-4 bg-white text-indigo-600 hover:bg-slate-50 rounded-xl font-bold transition-colors shadow-xl flex items-center justify-center gap-2 mx-auto group w-max">
-              Start Your Transformation
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <Link to="/contact" className="modern-btn group mx-auto w-max">
+              <span>START YOUR TRANSFORMATION</span>
+              <span className="icon-circle">
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </span>
             </Link>
           </div>
         </motion.div>

@@ -4,12 +4,12 @@ import ParticleNetwork from './ParticleNetwork';
 
 const NetworkSection = () => {
   return (
-    <section className="relative py-32 bg-slate-50 dark:bg-[#0B1120] overflow-hidden min-h-[80vh] flex items-center border-t border-slate-200 dark:border-slate-800">
+    <section className="relative py-32 bg-slate-50 dark:bg-[#1A1514] overflow-hidden min-h-[80vh] flex items-center border-t border-slate-200 dark:border-slate-800">
       {/* Background Interactive Particles */}
       <ParticleNetwork />
       
       {/* Overlay Gradients to fade edges */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-50/80 dark:from-[#0B1120]/80 via-transparent to-slate-50/80 dark:to-[#0B1120]/80 pointer-events-none z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-50/80 dark:from-[#1A1514]/80 via-transparent to-slate-50/80 dark:to-[#1A1514]/80 pointer-events-none z-0"></div>
 
       <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pointer-events-none w-full">
         <div className="text-center max-w-3xl mx-auto pointer-events-auto">

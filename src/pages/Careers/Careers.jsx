@@ -19,7 +19,7 @@ const Careers = () => {
         subtitle="Help us build the next generation of digital enterprise solutions."
         bgImage="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
       />
-      <section className="py-24 bg-white dark:bg-[#0B1120]">
+      <section className="py-24 bg-white dark:bg-[#1A1514]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Open Positions</h2>
@@ -45,7 +45,7 @@ const Careers = () => {
                     <span>{job.type}</span>
                   </div>
                 </div>
-                <button className="mt-4 md:mt-0 px-6 py-2 bg-white dark:bg-[#0B1120] border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors font-medium">
+                <button className="mt-4 md:mt-0 px-6 py-2 bg-white dark:bg-[#1A1514] border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors font-medium">
                   Apply Now
                 </button>
               </motion.div>

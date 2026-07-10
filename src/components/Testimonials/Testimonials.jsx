@@ -6,7 +6,7 @@ import { Quote } from 'lucide-react';
 
 const Testimonials = () => {
   return (
-    <section className="py-24 bg-white dark:bg-[#0B1120]">
+    <section className="py-24 bg-white dark:bg-[#1A1514]">
       <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase text-sm mb-3">Client Stories</h2>

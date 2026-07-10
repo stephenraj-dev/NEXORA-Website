@@ -1,8 +1,37 @@
 @import "tailwindcss";
+
+@theme {
+  /* Coral/Orange Theme overriding default Indigo */
+  --color-indigo-50: #fff5f2;
+  --color-indigo-100: #ffe7df;
+  --color-indigo-200: #ffcfbe;
+  --color-indigo-300: #ffad92;
+  --color-indigo-400: #ff825c;
+  --color-indigo-500: #ff5a2c;
+  --color-indigo-600: #ff3d08;
+  --color-indigo-700: #d92b02;
+  --color-indigo-800: #ae2303;
+  --color-indigo-900: #8e220b;
+  --color-indigo-950: #4d0e02;
+
+  /* Crimson/Pink Theme overriding default Purple */
+  --color-purple-50: #fff0f3;
+  --color-purple-100: #ffe2e8;
+  --color-purple-200: #ffcad6;
+  --color-purple-300: #ff9eb3;
+  --color-purple-400: #ff6b8b;
+  --color-purple-500: #fe3d67;
+  --color-purple-600: #ed1545;
+  --color-purple-700: #c80a32;
+  --color-purple-800: #a70b2d;
+  --color-purple-900: #8e0e2a;
+  --color-purple-950: #4f0312;
+}
+
 @custom-variant dark (&:where(.dark, .dark *));
 @layer base {
   body {
-    @apply bg-white text-slate-900 dark:bg-[#0B1120] dark:text-slate-50 antialiased font-sans transition-colors duration-300;
+    @apply bg-white text-slate-900 dark:bg-[#1A1514] dark:text-slate-50 antialiased font-sans transition-colors duration-300;
   }
 }
 
@@ -24,5 +53,79 @@
 
   .animate-floating {
     animation: floating 6s ease-in-out infinite;
+  }
+
+  /* Modern Pill Buttons */
+  .modern-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem 0.5rem 1.75rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    color: white;
+    background: linear-gradient(135deg, var(--color-indigo-400), var(--color-purple-500));
+    box-shadow: 0 4px 15px rgba(255, 90, 44, 0.3);
+    transition: all 0.3s ease;
+    border: none;
+    overflow: hidden;
+  }
+  
+  .modern-btn:hover {
+    box-shadow: 0 8px 25px rgba(255, 90, 44, 0.5);
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, var(--color-indigo-500), var(--color-purple-600));
+  }
+
+  .modern-btn .icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-left: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .modern-btn:hover .icon-circle {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+  }
+
+  .glossy-btn {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%), var(--color-indigo-600);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 4px 15px -3px rgba(0, 136, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+  }
+  
+  .glossy-btn:hover {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), var(--color-indigo-500);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6), 0 8px 25px -5px rgba(0, 136, 255, 0.7);
+    transform: translateY(-2px);
+  }
+
+  .electric-border {
+    position: relative;
+  }
+  .electric-border::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: linear-gradient(45deg, var(--color-indigo-500), var(--color-purple-500), var(--color-indigo-500));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    filter: blur(8px);
+  }
+  .electric-border:hover::before {
+    opacity: 1;
   }
 }

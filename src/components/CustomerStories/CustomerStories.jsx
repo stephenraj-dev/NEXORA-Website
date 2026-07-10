@@ -47,7 +47,7 @@ const CustomerStories = () => {
   };
 
   return (
-    <section className="py-24 bg-white dark:bg-[#0B1120] overflow-hidden border-t border-slate-100 dark:border-slate-800/50">
+    <section className="py-24 bg-white dark:bg-[#1A1514] overflow-hidden border-t border-slate-100 dark:border-slate-800/50">
       <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}

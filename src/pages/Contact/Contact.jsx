@@ -11,7 +11,7 @@ const Contact = () => {
         subtitle="Get in touch with our team to discuss your next big project."
         bgImage="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
       />
-      <section className="py-24 bg-slate-50 dark:bg-[#0B1120]">
+      <section className="py-24 bg-slate-50 dark:bg-[#1A1514]">
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto bg-white dark:bg-[#1E293B] rounded-2xl shadow-xl p-8 md:p-12 border border-slate-200 dark:border-slate-800">
             <motion.form 

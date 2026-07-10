@@ -26,7 +26,7 @@ const Home = () => {
       <VideoIntro />
       
       {/* Content wrapper that slides over the sticky video */}
-      <div className="relative z-10 w-full bg-white dark:bg-[#0B1120] shadow-2xl">
+      <div className="relative z-10 w-full bg-white dark:bg-[#1A1514] shadow-2xl">
         <Hero />
         <TrustedCompanies />
         <AboutSection />

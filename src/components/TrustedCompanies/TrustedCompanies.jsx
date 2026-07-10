@@ -5,7 +5,7 @@ import { trustedCompanies } from '../../data/mockData';
 
 const TrustedCompanies = () => {
   return (
-    <section className="py-12 border-y border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-[#0B1120]/50 overflow-hidden">
+    <section className="py-12 border-y border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-[#1A1514]/50 overflow-hidden">
       <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8">
         <p className="text-sm font-semibold tracking-wider text-slate-500 dark:text-slate-400 uppercase">Trusted by innovative teams worldwide</p>
       </div>

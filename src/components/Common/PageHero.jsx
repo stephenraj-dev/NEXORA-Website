@@ -17,7 +17,7 @@ const PageHero = ({ title, subtitle, bgImage = "https://images.unsplash.com/phot
         />
         <div className="absolute inset-0 bg-slate-900/60 mix-blend-multiply pointer-events-none"></div>
         {/* Reduced white blur at the bottom */}
-        <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-white/70 dark:from-[#0B1120] to-transparent pointer-events-none"></div>
+        <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-white/70 dark:from-[#1A1514] to-transparent pointer-events-none"></div>
       </div>
       
       <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">

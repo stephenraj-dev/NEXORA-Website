@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const NotFound = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-[#0B1120] px-4">
+    <div className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-[#1A1514] px-4">
       <div className="text-center">
         <motion.h1 
           initial={{ opacity: 0, scale: 0.8 }}

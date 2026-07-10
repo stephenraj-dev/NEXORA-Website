@@ -40,7 +40,7 @@ const Navbar = () => {
       className={twMerge(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         isScrolled
-          ? 'bg-white/80 dark:bg-[#0B1120]/80 backdrop-blur-md shadow-sm border-b border-slate-200 dark:border-slate-800'
+          ? 'bg-white/80 dark:bg-[#1A1514]/80 backdrop-blur-md shadow-sm border-b border-slate-200 dark:border-slate-800'
           : 'bg-transparent py-4'
       )}
     >
@@ -105,7 +105,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-[#0B1120] border-b border-slate-200 dark:border-slate-800 absolute top-full left-0 right-0 shadow-lg">
+        <div className="md:hidden bg-white dark:bg-[#1A1514] border-b border-slate-200 dark:border-slate-800 absolute top-full left-0 right-0 shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <Link

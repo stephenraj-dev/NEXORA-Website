@@ -10,8 +10,8 @@ const Hero = () => {
       
       {/* Background Grid & Overlays */}
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay dark:opacity-10 pointer-events-none z-0"></div>
-      <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-indigo-50/80 dark:from-[#0B1120] to-transparent pointer-events-none z-0"></div>
-      <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-white dark:from-[#0B1120] to-transparent pointer-events-none z-0"></div>
+      <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-indigo-50/80 dark:from-[#1A1514] to-transparent pointer-events-none z-0"></div>
+      <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-white dark:from-[#1A1514] to-transparent pointer-events-none z-0"></div>
 
       <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pointer-events-none">
         <div className="text-center max-w-4xl mx-auto pointer-events-auto">
@@ -52,9 +52,11 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Link to="/contact" className="w-full sm:w-auto px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-medium transition-all shadow-lg shadow-indigo-600/30 flex items-center justify-center gap-2 group">
-              Start Free Trial
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <Link to="/contact" className="modern-btn group">
+              <span>START FREE TRIAL</span>
+              <span className="icon-circle">
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </span>
             </Link>
             <Link to="/solutions" className="w-full sm:w-auto px-8 py-4 bg-white dark:bg-[#1E293B] hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 rounded-xl font-medium transition-all shadow-sm flex items-center justify-center">
               View Solutions
