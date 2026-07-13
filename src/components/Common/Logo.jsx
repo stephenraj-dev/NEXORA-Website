@@ -14,7 +14,7 @@ const Logo = () => {
           NEXORA
         </span>
         <span className="text-[10px] text-[var(--color-indigo-500)] font-semibold tracking-widest uppercase mt-0.5">
-          Enterprise Solutions
+          Digital Solutions
         </span>
       </div>
     </div>

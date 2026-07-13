@@ -13,7 +13,7 @@ const CTA = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.6 }}
-          className="rounded-[2.5rem] bg-gradient-to-br from-indigo-600 to-purple-700 dark:from-indigo-900 dark:to-purple-900 p-12 md:p-16 text-center relative overflow-hidden"
+          className="rounded-[2.5rem] bg-linear-to-br from-indigo-600 to-purple-700 dark:from-indigo-900 dark:to-purple-900 p-12 md:p-16 text-center relative overflow-hidden"
         >
           <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
           

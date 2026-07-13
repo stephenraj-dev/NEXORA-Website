@@ -25,9 +25,9 @@ const Process = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex flex-col items-start lg:items-center text-left lg:text-center"
+                className="flex flex-col items-start lg:items-center text-left lg:text-center group cursor-pointer"
               >
-                <div className="w-12 h-12 rounded-full bg-indigo-600 flex items-center justify-center font-bold mb-6 shadow-lg shadow-indigo-600/30 lg:mx-auto">
+                <div className="w-12 h-12 rounded-full bg-indigo-600 flex items-center justify-center font-bold mb-6 shadow-lg shadow-indigo-600/30 lg:mx-auto transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:-translate-y-4 group-hover:scale-110">
                   {step.id}
                 </div>
                 <h4 className="text-lg font-bold mb-2">{step.title}</h4>

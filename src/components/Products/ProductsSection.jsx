@@ -22,7 +22,7 @@ const ProductsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.2 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B] overflow-hidden hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300"
+              className="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B] overflow-hidden hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300 hover-shimmer"
             >
               <div className="p-8">
                 <span className="text-xs font-bold px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-full mb-4 inline-block">

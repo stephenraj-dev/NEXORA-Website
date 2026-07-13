@@ -55,8 +55,8 @@
     animation: floating 6s ease-in-out infinite;
   }
 
-  /* Modern Pill Buttons */
-  .modern-btn {
+  /* Modern Pill Buttons with Sweep Animation */
+  .modern-btn, .glossy-btn {
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -67,20 +67,40 @@
     font-size: 0.875rem;
     letter-spacing: 0.05em;
     color: white;
-    background: linear-gradient(135deg, var(--color-indigo-400), var(--color-purple-500));
-    box-shadow: 0 4px 15px rgba(255, 90, 44, 0.3);
-    transition: all 0.3s ease;
-    border: none;
+    background: var(--color-indigo-600);
+    border: 2px solid var(--color-indigo-600);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 4px 15px rgba(255, 90, 44, 0.3);
   }
   
-  .modern-btn:hover {
-    box-shadow: 0 8px 25px rgba(255, 90, 44, 0.5);
-    transform: translateY(-2px);
-    background: linear-gradient(135deg, var(--color-indigo-500), var(--color-purple-600));
+  .modern-btn::before, .glossy-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
   }
 
-  .modern-btn .icon-circle {
+  .modern-btn:hover, .glossy-btn:hover {
+    color: var(--color-indigo-600);
+    border-color: var(--color-indigo-600);
+    box-shadow: 0 8px 25px rgba(255, 90, 44, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .modern-btn:hover::before, .glossy-btn:hover::before {
+    transform: scaleX(1);
+  }
+
+  .modern-btn .icon-circle, .glossy-btn .icon-circle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,26 +109,13 @@
     border-radius: 9999px;
     background-color: rgba(255, 255, 255, 0.2);
     margin-left: 1.5rem;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
   }
 
-  .modern-btn:hover .icon-circle {
-    background-color: rgba(255, 255, 255, 0.3);
+  .modern-btn:hover .icon-circle, .glossy-btn:hover .icon-circle {
+    background-color: var(--color-indigo-50);
+    color: var(--color-indigo-600);
     transform: scale(1.05);
-  }
-
-  .glossy-btn {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%), var(--color-indigo-600);
-    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 4px 15px -3px rgba(0, 136, 255, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px);
-    transition: all 0.3s ease;
-  }
-  
-  .glossy-btn:hover {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), var(--color-indigo-500);
-    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6), 0 8px 25px -5px rgba(0, 136, 255, 0.7);
-    transform: translateY(-2px);
   }
 
   .electric-border {
@@ -127,5 +134,35 @@
   }
   .electric-border:hover::before {
     opacity: 1;
+  }
+
+  /* Shimmer Hover Effect */
+  .hover-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hover-shimmer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+    transition: all 0.75s ease;
+    z-index: 20;
+    pointer-events: none;
+  }
+  
+  .hover-shimmer:hover::after {
+    left: 200%;
+    transition: all 0.75s ease;
   }
 }

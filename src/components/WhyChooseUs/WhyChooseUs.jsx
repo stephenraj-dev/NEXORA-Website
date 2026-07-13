@@ -23,7 +23,7 @@ const WhyChooseUs = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="flex gap-4 p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800"
+                className="flex gap-4 p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 group hover-shimmer"
               >
                 <div className="w-12 h-12 rounded-full bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center shrink-0">
                   <Icon className="text-indigo-600 dark:text-indigo-400" size={24} />

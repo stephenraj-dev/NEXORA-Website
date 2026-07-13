@@ -11,7 +11,6 @@ import NetworkSection from '../../components/Network/NetworkSection';
 import LiveDashboardPreview from '../../components/Dashboard/LiveDashboardPreview';
 import Statistics from '../../components/Statistics/Statistics';
 import CustomerStories from '../../components/CustomerStories/CustomerStories';
-import Testimonials from '../../components/Testimonials/Testimonials';
 import FAQ from '../../components/FAQ/FAQ';
 import CTA from '../../components/CTA/CTA';
 
@@ -38,7 +37,6 @@ const Home = () => {
         <LiveDashboardPreview />
         <Statistics />
         <CustomerStories />
-        <Testimonials />
         <FAQ />
         <CTA />
       </div>

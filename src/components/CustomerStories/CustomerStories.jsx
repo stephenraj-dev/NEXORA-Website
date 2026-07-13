@@ -6,32 +6,37 @@ import { Link } from 'react-router-dom';
 const stories = [
   {
     id: 1,
-    company: "GlobalBank Inc.",
-    description: "Transforms into a modern, cloud-centric, intelligence-driven security-operating organisation.",
+    name: "Sarah Jenkins",
+    role: "CTO, GlobalTech",
+    feedback: "NEXORA completely transformed our legacy infrastructure. Their cloud migration strategy was flawless and saved us 40% in operational costs.",
     image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 2,
-    company: "HealthPlus",
-    description: "Shifts to a business-aligned operating model designed to help it scale, innovate, and adapt with greater confidence.",
+    name: "Michael Chen",
+    role: "CEO, Apex Financial",
+    feedback: "The custom CRM they built for us has increased our sales efficiency tenfold. The UI is incredibly intuitive and the performance is unmatched.",
     image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 3,
-    company: "Vantage Logistics",
-    description: "Powers AI-driven fleet management and real-time tracking experience with NEXORA.",
+    name: "Emma Watson",
+    role: "Dir. of Operations, Horizon Digital",
+    feedback: "Their team is highly professional, responsive, and truly understands enterprise needs. We consider NEXORA a strategic partner, not just a vendor.",
     image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 4,
-    company: "TechNova Solutions",
-    description: "Accelerates digital transformation through scalable enterprise architecture.",
+    name: "David Kim",
+    role: "VP Engineering, TechNova",
+    feedback: "Accelerating our digital transformation through scalable enterprise architecture wouldn't have been possible without NEXORA's exceptional talent.",
     image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 5,
-    company: "RetailPrime",
-    description: "Reimagines omnichannel retail experiences with cutting-edge data pipelines.",
+    name: "Rachel Moore",
+    role: "Founder, RetailPrime",
+    feedback: "They reimagined our omnichannel retail experiences with cutting-edge data pipelines. Outstanding delivery and support.",
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   }
 ];
@@ -59,7 +64,7 @@ const CustomerStories = () => {
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-5xl font-normal text-slate-900 dark:text-white font-heading"
           >
-            Customer Stories
+            Client Stories
           </motion.h2>
           
           {/* Scroll Buttons */}
@@ -100,27 +105,31 @@ const CustomerStories = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="min-w-[320px] md:min-w-[400px] lg:min-w-[450px] h-[550px] relative rounded-2xl overflow-hidden group snap-start cursor-pointer"
+              className="min-w-[320px] md:min-w-[400px] lg:min-w-[450px] h-[550px] relative rounded-2xl overflow-hidden group snap-start cursor-pointer hover-shimmer"
             >
               {/* Background Image with Zoom on Hover */}
               <div className="absolute inset-0 w-full h-full">
                 <img 
                   src={story.image} 
-                  alt={story.company} 
+                  alt={story.name} 
                   className="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700 ease-out"
                 />
               </div>
 
               {/* Gradient Overlays for text readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-transparent pointer-events-none"></div>
 
               {/* Card Content */}
               <div className="absolute bottom-0 left-0 right-0 p-8 flex flex-col justify-end h-full">
-                <h3 className="text-3xl font-medium text-white mb-4 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                  {story.company}
-                </h3>
-                <p className="text-slate-200/90 text-sm md:text-base leading-relaxed mb-8 opacity-90 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                  {story.description}
+                <div className="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                  <h3 className="text-2xl font-bold text-white mb-1">
+                    {story.name}
+                  </h3>
+                  <p className="text-indigo-300 text-sm font-medium mb-4">{story.role}</p>
+                </div>
+                
+                <p className="text-slate-200/90 text-sm md:text-base leading-relaxed mb-8 opacity-90 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 italic">
+                  "{story.feedback}"
                 </p>
                 
                 {/* Read More Button */}
