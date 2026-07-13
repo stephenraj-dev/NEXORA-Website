@@ -11,6 +11,12 @@ import Careers from '../pages/Careers/Careers';
 import Contact from '../pages/Contact/Contact';
 import NotFound from '../pages/NotFound/NotFound';
 
+import Insights from '../pages/Insights/Insights';
+import CaseStudies from '../pages/CaseStudies/CaseStudies';
+import Partnerships from '../pages/Partnerships/Partnerships';
+import Sustainability from '../pages/Sustainability/Sustainability';
+import TrustCenter from '../pages/TrustCenter/TrustCenter';
+
 const AppRoute = () => {
   return (
     <BrowserRouter>
@@ -24,6 +30,14 @@ const AppRoute = () => {
           <Route path="industries" element={<Industries />} />
           <Route path="careers" element={<Careers />} />
           <Route path="contact" element={<Contact />} />
+          
+          {/* New Enterprise MNC Pages */}
+          <Route path="insights" element={<Insights />} />
+          <Route path="case-studies" element={<CaseStudies />} />
+          <Route path="partnerships" element={<Partnerships />} />
+          <Route path="sustainability" element={<Sustainability />} />
+          <Route path="trust-center" element={<TrustCenter />} />
+          
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
