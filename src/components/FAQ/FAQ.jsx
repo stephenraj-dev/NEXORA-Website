@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { faqData } from '../../data/mockData';
 import { ChevronDown } from 'lucide-react';
+import RevealText from '../Common/RevealText';
+
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(0);
@@ -11,10 +13,8 @@ const FAQ = () => {
     <section className="py-24 bg-slate-50 dark:bg-[#060B14]">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase text-sm mb-3">FAQ</h2>
-          <h3 className="text-3xl font-bold text-slate-900 dark:text-white font-heading">
-            Frequently asked questions
-          </h3>
+          <RevealText as="h2" className="text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase text-sm mb-3" text="FAQ" />
+          <RevealText as="h3" className="text-3xl font-bold text-slate-900 dark:text-white font-heading" text="Frequently asked questions" />
         </div>
         <div className="space-y-4">
           {faqData.map((faq, index) => (

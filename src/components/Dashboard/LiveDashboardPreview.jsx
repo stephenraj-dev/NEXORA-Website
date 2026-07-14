@@ -1,16 +1,16 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import RevealText from '../Common/RevealText';
+
 
 const LiveDashboardPreview = () => {
   return (
     <section className="py-24 bg-slate-50 dark:bg-[#060B14] overflow-hidden">
       <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase text-sm mb-3">Next-Gen UI</h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 font-heading">
-            Experience our dashboard aesthetics.
-          </h3>
+          <RevealText as="h2" className="text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase text-sm mb-3" text="Next-Gen UI" />
+          <RevealText as="h3" className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 font-heading" text="Experience our dashboard aesthetics." />
         </div>
         
         <motion.div 

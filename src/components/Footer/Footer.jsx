@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Globe, Link as LinkIcon, Mail, MapPin, Phone } from 'lucide-react';
 import Logo from '../Common/Logo';
+import RevealText from '../Common/RevealText';
+
 
 const Footer = () => {
   return (
@@ -12,9 +14,7 @@ const Footer = () => {
           {/* Brand & Description */}
           <div className="lg:col-span-2">
             <Logo />
-            <p className="mt-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed max-w-sm">
-              We build scalable enterprise solutions and modern digital products that empower businesses to thrive in a connected world.
-            </p>
+            <RevealText as="p" className="mt-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed max-w-sm" text="We build scalable enterprise solutions and modern digital products that empower businesses to thrive in a connected world." />
             <div className="mt-6 flex items-center gap-4">
               <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-indigo-100 hover:text-indigo-600 dark:hover:bg-indigo-900/30 dark:hover:text-indigo-400 transition-colors">
                 <Globe size={18} />
@@ -27,7 +27,7 @@ const Footer = () => {
 
           {/* Solutions */}
           <div>
-            <h3 className="font-bold text-slate-900 dark:text-white mb-6">Solutions</h3>
+            <RevealText as="h3" className="font-bold text-slate-900 dark:text-white mb-6" text="Solutions" />
             <ul className="space-y-4">
               <li><Link to="/solutions" className="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 text-sm transition-colors">Enterprise Software</Link></li>
               <li><Link to="/solutions" className="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 text-sm transition-colors">Cloud Migration</Link></li>
@@ -38,7 +38,7 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h3 className="font-bold text-slate-900 dark:text-white mb-6">Company</h3>
+            <RevealText as="h3" className="font-bold text-slate-900 dark:text-white mb-6" text="Company" />
             <ul className="space-y-4">
               <li><Link to="/about" className="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 text-sm transition-colors">About Us</Link></li>
               <li><Link to="/careers" className="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 text-sm transition-colors">Careers</Link></li>
@@ -49,7 +49,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="font-bold text-slate-900 dark:text-white mb-6">Contact Us</h3>
+            <RevealText as="h3" className="font-bold text-slate-900 dark:text-white mb-6" text="Contact Us" />
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
                 <MapPin size={18} className="text-indigo-600 shrink-0 mt-0.5" />

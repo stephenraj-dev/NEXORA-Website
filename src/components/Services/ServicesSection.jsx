@@ -2,19 +2,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { servicesData } from '../../data/mockData';
+import RevealText from '../Common/RevealText';
+
 
 const ServicesSection = () => {
   return (
     <section className="py-24 bg-slate-50 dark:bg-[#060B14]">
       <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase text-sm mb-3">Our Services</h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 font-heading">
-            Enterprise capabilities for modern demands.
-          </h3>
-          <p className="text-slate-600 dark:text-slate-400 text-lg">
-            End-to-end technology services designed to modernize your infrastructure, automate processes, and scale your product vision.
-          </p>
+          <RevealText as="h2" className="text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase text-sm mb-3" text="Our Services" />
+          <RevealText as="h3" className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 font-heading" text="Enterprise capabilities for modern demands." />
+          <RevealText as="p" className="text-slate-600 dark:text-slate-400 text-lg" text="End-to-end technology services designed to modernize your infrastructure, automate processes, and scale your product vision." />
         </div>
 
         <div className="relative border-l border-slate-200 dark:border-slate-800 ml-4 md:mx-auto md:pl-0 max-w-4xl">

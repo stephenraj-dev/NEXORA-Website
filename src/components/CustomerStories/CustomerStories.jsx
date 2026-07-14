@@ -2,6 +2,8 @@ import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, ArrowRight as ArrowIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import RevealText from '../Common/RevealText';
+
 
 const stories = [
   {
@@ -38,6 +40,20 @@ const stories = [
     role: "Founder, RetailPrime",
     feedback: "They reimagined our omnichannel retail experiences with cutting-edge data pipelines. Outstanding delivery and support.",
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 6,
+    name: "David Kim",
+    role: "VP Engineering, TechNova",
+    feedback: "Accelerating our digital transformation through scalable enterprise architecture wouldn't have been possible without NEXORA's exceptional talent.",
+    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 7,
+    name: "Rachel Moore",
+    role: "Founder, RetailPrime",
+    feedback: "They reimagined our omnichannel retail experiences with cutting-edge data pipelines. Outstanding delivery and support.",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   }
 ];
 
@@ -57,15 +73,13 @@ const CustomerStories = () => {
         
         {/* Header Section */}
         <div className="flex justify-between items-end mb-12">
-          <motion.h2 
+          <RevealText as="h2" 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-5xl font-normal text-slate-900 dark:text-white font-heading"
-          >
-            Client Stories
-          </motion.h2>
+           text="Client Stories" />
           
           {/* Scroll Buttons */}
           <motion.div 
@@ -105,7 +119,7 @@ const CustomerStories = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="min-w-[320px] md:min-w-[400px] lg:min-w-[450px] h-[550px] relative rounded-2xl overflow-hidden group snap-start cursor-pointer hover-shimmer"
+              className="min-w-[320px] md:min-w-100 lg:min-w-112.5 h-137.5 relative rounded-2xl overflow-hidden group snap-start cursor-pointer hover-shimmer"
             >
               {/* Background Image with Zoom on Hover */}
               <div className="absolute inset-0 w-full h-full">
@@ -117,7 +131,7 @@ const CustomerStories = () => {
               </div>
 
               {/* Gradient Overlays for text readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-transparent pointer-events-none"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-slate-900/90 via-slate-900/60 to-transparent pointer-events-none"></div>
 
               {/* Card Content */}
               <div className="absolute bottom-0 left-0 right-0 p-8 flex flex-col justify-end h-full">

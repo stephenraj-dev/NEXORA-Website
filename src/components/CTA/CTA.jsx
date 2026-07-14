@@ -3,6 +3,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import RevealText from '../Common/RevealText';
+
 
 const CTA = () => {
   return (
@@ -18,12 +20,8 @@ const CTA = () => {
           <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
           
           <div className="relative z-10">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 font-heading">
-              Ready to build your next software product?
-            </h2>
-            <p className="text-indigo-100 text-lg mb-10 max-w-2xl mx-auto">
-              Join industry leaders who trust NEXORA to deliver robust, scalable, and beautifully designed digital solutions.
-            </p>
+            <RevealText as="h2" className="text-3xl md:text-5xl font-bold text-white mb-6 font-heading" text="Ready to build your next software product?" />
+            <RevealText as="p" className="text-indigo-100 text-lg mb-10 max-w-2xl mx-auto" text="Join industry leaders who trust NEXORA to deliver robust, scalable, and beautifully designed digital solutions." />
             <Link to="/contact" className="modern-btn group mx-auto w-max">
               <span>START YOUR TRANSFORMATION</span>
               <span className="icon-circle">

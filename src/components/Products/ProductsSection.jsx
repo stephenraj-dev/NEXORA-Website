@@ -3,16 +3,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { productsData } from '../../data/mockData';
 import { ArrowRight, Check } from 'lucide-react';
+import RevealText from '../Common/RevealText';
+
 
 const ProductsSection = () => {
   return (
     <section className="py-24 bg-white dark:bg-[#1A1514]">
       <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase text-sm mb-3">Enterprise Products</h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 font-heading">
-            Ready-to-deploy enterprise platforms.
-          </h3>
+          <RevealText as="h2" className="text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase text-sm mb-3" text="Enterprise Products" />
+          <RevealText as="h3" className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 font-heading" text="Ready-to-deploy enterprise platforms." />
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {productsData.map((product, index) => (

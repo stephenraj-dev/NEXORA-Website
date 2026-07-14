@@ -2,6 +2,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
+import RevealText from '../Common/RevealText';
+
 
 const AboutSection = () => {
   return (
@@ -14,13 +16,9 @@ const AboutSection = () => {
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase text-sm mb-3">About NEXORA</h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 font-heading">
-              Transforming complex challenges into elegant digital solutions.
-            </h3>
-            <p className="text-slate-600 dark:text-slate-400 mb-8 text-lg leading-relaxed">
-              Founded on the principles of engineering excellence and design thinking, NEXORA operates at the intersection of technology and business strategy. We don't just write code; we build resilient, scalable platforms that drive real enterprise value.
-            </p>
+            <RevealText as="h2" className="text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase text-sm mb-3" text="About NEXORA" />
+            <RevealText as="h3" className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 font-heading" text="Transforming complex challenges into elegant digital solutions." />
+            <RevealText as="p" className="text-slate-600 dark:text-slate-400 mb-8 text-lg leading-relaxed" text="Founded on the principles of engineering excellence and design thinking, NEXORA operates at the intersection of technology and business strategy. We don't just write code; we build resilient, scalable platforms that drive real enterprise value." />
             <ul className="space-y-4">
               {['Award-winning engineering team', 'ISO 27001 Certified Security', 'Agile delivery methodology'].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 text-slate-700 dark:text-slate-300">
@@ -45,8 +43,8 @@ const AboutSection = () => {
                />
                <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 to-transparent"></div>
                <div className="absolute bottom-0 left-0 p-8">
-                 <p className="text-white font-bold text-xl mb-2 font-heading">Empowering Teams</p>
-                 <p className="text-slate-300 text-sm">Building software that matters.</p>
+                 <RevealText as="p" className="text-white font-bold text-xl mb-2 font-heading" text="Empowering Teams" />
+                 <RevealText as="p" className="text-slate-300 text-sm" text="Building software that matters." />
                </div>
             </div>
           </motion.div>

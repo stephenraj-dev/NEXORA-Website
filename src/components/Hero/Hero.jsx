@@ -3,6 +3,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Activity } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import RevealText from '../Common/RevealText';
+
 
 const Hero = () => {
   return (
@@ -62,15 +64,13 @@ const Hero = () => {
             </motion.span>
           </motion.h1>
           
-          <motion.p 
+          <RevealText as="p" 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
             className="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed"
-          >
-            We partner with global enterprises to design, develop, and scale world-class software products, AI platforms, and cloud infrastructure.
-          </motion.p>
+           text="We partner with global enterprises to design, develop, and scale world-class software products, AI platforms, and cloud infrastructure." />
           
           <motion.div 
             initial={{ opacity: 0, y: 100 }}

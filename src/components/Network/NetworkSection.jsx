@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ParticleNetwork from './ParticleNetwork';
+import RevealText from '../Common/RevealText';
+
 
 const NetworkSection = () => {
   return (
@@ -33,15 +35,13 @@ const NetworkSection = () => {
             Connected. <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-sky-500 dark:from-indigo-400 dark:to-sky-400">Everywhere.</span>
           </motion.h2>
           
-          <motion.p 
+          <RevealText as="p" 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl text-slate-600 dark:text-slate-400"
-          >
-            Interact with our ultra-low latency global network. Move your cursor to see the connection nodes respond instantly across the globe.
-          </motion.p>
+           text="Interact with our ultra-low latency global network. Move your cursor to see the connection nodes respond instantly across the globe." />
         </div>
       </div>
     </section>

@@ -2,16 +2,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { processData } from '../../data/mockData';
+import RevealText from '../Common/RevealText';
+
 
 const Process = () => {
   return (
     <section className="py-24 bg-slate-900 dark:bg-[#060B14] text-white">
-      <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-360 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
-          <h2 className="text-indigo-400 font-semibold tracking-wider uppercase text-sm mb-3">How We Work</h2>
-          <h3 className="text-3xl md:text-4xl font-bold mb-6 font-heading">
-            Proven engineering methodology.
-          </h3>
+          <RevealText as="h2" className="text-indigo-400 font-semibold tracking-wider uppercase text-sm mb-3" text="How We Work" />
+          <RevealText as="h3" className="text-3xl md:text-4xl font-bold mb-6 font-heading" text="Proven engineering methodology." />
         </div>
         <div className="relative">
           {/* Timeline Line */}
