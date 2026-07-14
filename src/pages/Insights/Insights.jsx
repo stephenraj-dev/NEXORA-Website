@@ -64,7 +64,7 @@ const Insights = () => {
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             className="group relative rounded-3xl overflow-hidden bg-white dark:bg-[#151A28] shadow-xl border border-slate-200 dark:border-slate-800 flex flex-col lg:flex-row hover-shimmer cursor-pointer"
           >
             <div className="lg:w-3/5 overflow-hidden">
@@ -105,7 +105,7 @@ const Insights = () => {
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.4, delay: idx * 0.1 }}
                 className="group bg-white dark:bg-[#151A28] rounded-3xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-800 hover:border-indigo-500/50 transition-all hover-shimmer cursor-pointer flex flex-col h-full"
               >

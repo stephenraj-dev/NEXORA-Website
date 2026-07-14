@@ -76,7 +76,7 @@ const CustomerStories = () => {
           <RevealText as="h2" 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-5xl font-normal text-slate-900 dark:text-white font-heading"
            text="Client Stories" />
@@ -85,7 +85,7 @@ const CustomerStories = () => {
           <motion.div 
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.5 }}
             className="hidden md:flex gap-4"
           >
@@ -117,7 +117,7 @@ const CustomerStories = () => {
               key={story.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               className="min-w-[320px] md:min-w-100 lg:min-w-112.5 h-137.5 relative rounded-2xl overflow-hidden group snap-start cursor-pointer hover-shimmer"
             >

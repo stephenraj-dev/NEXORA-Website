@@ -158,40 +158,46 @@ const Navbar = () => {
             <Link
               to="/"
               className={twMerge(
-                "relative font-medium transition-colors group flex items-center h-full",
+                "font-medium transition-colors group flex items-center h-full",
                 location.pathname === '/' 
                   ? "text-indigo-600 dark:text-indigo-400" 
                   : "text-slate-600 hover:text-indigo-600 dark:text-slate-300 dark:hover:text-indigo-400"
               )}
             >
-              <span>Home</span>
-              <span className={twMerge("absolute bottom-0 left-0 h-0.5 bg-indigo-600 dark:bg-indigo-400 transition-all duration-300", location.pathname === '/' ? "w-full" : "w-0 group-hover:w-full")}></span>
+              <span className="relative">
+                Home
+                <span className={twMerge("absolute -bottom-1 left-0 h-0.5 bg-indigo-600 dark:bg-indigo-400 transition-all duration-300", location.pathname === '/' ? "w-full" : "w-0 group-hover:w-full")}></span>
+              </span>
             </Link>
 
             <Link
               to="/about"
               className={twMerge(
-                "relative font-medium transition-colors group flex items-center h-full",
+                "font-medium transition-colors group flex items-center h-full",
                 location.pathname === '/about' 
                   ? "text-indigo-600 dark:text-indigo-400" 
                   : "text-slate-600 hover:text-indigo-600 dark:text-slate-300 dark:hover:text-indigo-400"
               )}
             >
-              <span>About</span>
-              <span className={twMerge("absolute bottom-0 left-0 h-0.5 bg-indigo-600 dark:bg-indigo-400 transition-all duration-300", location.pathname === '/about' ? "w-full" : "w-0 group-hover:w-full")}></span>
+              <span className="relative">
+                About
+                <span className={twMerge("absolute -bottom-1 left-0 h-0.5 bg-indigo-600 dark:bg-indigo-400 transition-all duration-300", location.pathname === '/about' ? "w-full" : "w-0 group-hover:w-full")}></span>
+              </span>
             </Link>
 
             <Link
               to="/careers"
               className={twMerge(
-                "relative font-medium transition-colors group flex items-center h-full",
+                "font-medium transition-colors group flex items-center h-full",
                 location.pathname === '/careers' 
                   ? "text-indigo-600 dark:text-indigo-400" 
                   : "text-slate-600 hover:text-indigo-600 dark:text-slate-300 dark:hover:text-indigo-400"
               )}
             >
-              <span>Careers</span>
-              <span className={twMerge("absolute bottom-0 left-0 h-0.5 bg-indigo-600 dark:bg-indigo-400 transition-all duration-300", location.pathname === '/careers' ? "w-full" : "w-0 group-hover:w-full")}></span>
+              <span className="relative">
+                Careers
+                <span className={twMerge("absolute -bottom-1 left-0 h-0.5 bg-indigo-600 dark:bg-indigo-400 transition-all duration-300", location.pathname === '/careers' ? "w-full" : "w-0 group-hover:w-full")}></span>
+              </span>
             </Link>
 
 
@@ -246,14 +252,16 @@ const Navbar = () => {
             <Link
               to="/contact"
               className={twMerge(
-                "relative font-medium transition-colors group flex items-center h-full",
+                "font-medium transition-colors group flex items-center h-full",
                 location.pathname === '/contact' 
                   ? "text-indigo-600 dark:text-indigo-400" 
                   : "text-slate-600 hover:text-indigo-600 dark:text-slate-300 dark:hover:text-indigo-400"
               )}
             >
-              <span>Contact</span>
-              <span className={twMerge("absolute bottom-0 left-0 h-0.5 bg-indigo-600 dark:bg-indigo-400 transition-all duration-300", location.pathname === '/contact' ? "w-full" : "w-0 group-hover:w-full")}></span>
+              <span className="relative">
+                Contact
+                <span className={twMerge("absolute -bottom-1 left-0 h-0.5 bg-indigo-600 dark:bg-indigo-400 transition-all duration-300", location.pathname === '/contact' ? "w-full" : "w-0 group-hover:w-full")}></span>
+              </span>
             </Link>
             
             <div className="flex items-center space-x-4 border-l pl-4 border-slate-200 dark:border-slate-700 h-8">

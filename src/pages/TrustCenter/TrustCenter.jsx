@@ -60,7 +60,7 @@ const TrustCenter = () => {
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="bg-white dark:bg-[#151A28] rounded-3xl p-10 shadow-xl border border-slate-200 dark:border-slate-800 hover-shimmer relative overflow-hidden group"
               >
@@ -85,7 +85,7 @@ const TrustCenter = () => {
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               className="lg:w-1/2"
             >
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 font-heading">
@@ -108,7 +108,7 @@ const TrustCenter = () => {
             <motion.div 
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               className="lg:w-1/2"
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl group hover-shimmer p-2 bg-gradient-to-br from-indigo-500/20 to-purple-500/20">

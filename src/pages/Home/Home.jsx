@@ -21,7 +21,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="flex flex-col w-full relative bg-transparent">
+    <div className="flex flex-col w-full relative bg-transparent overflow-x-hidden">
       <VideoIntro />
       
       {/* Content wrapper that slides over the sticky video */}

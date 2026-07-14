@@ -54,7 +54,7 @@ const Partnerships = () => {
                 key={idx}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="bg-white dark:bg-[#151A28] rounded-3xl overflow-hidden shadow-xl border border-slate-200 dark:border-slate-800 flex flex-col hover-shimmer group"
               >

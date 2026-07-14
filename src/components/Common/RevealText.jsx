@@ -27,13 +27,11 @@ const RevealText = ({
   const childVariants = {
     hidden: { 
       opacity: 0, 
-      x: xOffset,
-      filter: 'blur(8px)'
+      x: xOffset
     },
     visible: { 
       opacity: 1, 
       x: 0, 
-      filter: 'blur(0px)',
       transition: { 
         type: 'spring', 
         damping: 15, 
@@ -55,7 +53,7 @@ const RevealText = ({
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.1, margin: "50px" }}
+      viewport={{ once: false, amount: 0.1, margin: "50px" }}
       className={`flex flex-wrap ${className}`}
       style={{ display: 'inline-flex' }}
     >
@@ -64,7 +62,7 @@ const RevealText = ({
           <motion.span
             variants={childVariants}
             className="inline-block"
-            style={{ willChange: 'transform, filter, opacity' }}
+            style={{ willChange: 'transform, opacity' }}
           >
             {word}
           </motion.span>

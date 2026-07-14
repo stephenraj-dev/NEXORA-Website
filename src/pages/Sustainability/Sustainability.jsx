@@ -77,7 +77,7 @@ const Sustainability = () => {
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="flex gap-6 group hover-shimmer p-8 rounded-3xl border border-transparent hover:border-slate-200 dark:hover:border-slate-800 hover:bg-slate-50 dark:hover:bg-[#1A1F2E] transition-all cursor-pointer"
               >

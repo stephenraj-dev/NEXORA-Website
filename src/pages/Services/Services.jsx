@@ -74,7 +74,7 @@ const Services = () => {
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: false }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white dark:bg-[#151A28] rounded-3xl p-8 border border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-200/20 dark:shadow-none group hover-shimmer"
                 >
@@ -105,7 +105,7 @@ const Services = () => {
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false }}>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 font-heading">Deliver faster. Build better.</h2>
               <p className="text-indigo-100 text-lg mb-8 leading-relaxed">
                 Our clients typically see a 40% reduction in time-to-market and a 60% decrease in critical infrastructure failures within the first year of our engagement. We don't just act as contractors; we act as your strategic engineering partner.
@@ -121,7 +121,7 @@ const Services = () => {
                 </div>
               </div>
             </motion.div>
-            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative h-[400px] rounded-3xl overflow-hidden shadow-2xl group hover-shimmer">
+            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false }} className="relative h-[400px] rounded-3xl overflow-hidden shadow-2xl group hover-shimmer">
               <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Team collaborating" className="w-full h-full object-cover" />
             </motion.div>
           </div>
