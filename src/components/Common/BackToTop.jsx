@@ -41,7 +41,7 @@ const BackToTop = () => {
           onHoverStart={() => setIsHovered(true)}
           onHoverEnd={() => setIsHovered(false)}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-[100] p-4 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 shadow-2xl shadow-indigo-500/20 hover:shadow-indigo-500/40 border border-slate-700 dark:border-slate-200 backdrop-blur-md transition-shadow group"
+          className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-[100] p-3 md:p-4 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 shadow-2xl shadow-indigo-500/20 hover:shadow-indigo-500/40 border border-slate-700 dark:border-slate-200 backdrop-blur-md transition-shadow group"
           aria-label="Back to top"
         >
           {/* Rocket thruster effect on hover */}

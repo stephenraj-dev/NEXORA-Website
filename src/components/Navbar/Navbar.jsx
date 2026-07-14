@@ -88,14 +88,6 @@ const Navbar = () => {
       name: 'Company',
       columns: [
         {
-          title: 'About',
-          items: [
-            { name: 'Our Story', path: '/about' },
-            { name: 'Leadership Team', path: '/about' },
-            { name: 'Careers', path: '/careers' },
-          ]
-        },
-        {
           title: 'Responsibility',
           items: [
             { name: 'Sustainability (ESG)', path: '/sustainability' },
@@ -176,6 +168,33 @@ const Navbar = () => {
               <span className={twMerge("absolute bottom-0 left-0 h-0.5 bg-indigo-600 dark:bg-indigo-400 transition-all duration-300", location.pathname === '/' ? "w-full" : "w-0 group-hover:w-full")}></span>
             </Link>
 
+            <Link
+              to="/about"
+              className={twMerge(
+                "relative font-medium transition-colors group flex items-center h-full",
+                location.pathname === '/about' 
+                  ? "text-indigo-600 dark:text-indigo-400" 
+                  : "text-slate-600 hover:text-indigo-600 dark:text-slate-300 dark:hover:text-indigo-400"
+              )}
+            >
+              <span>About</span>
+              <span className={twMerge("absolute bottom-0 left-0 h-0.5 bg-indigo-600 dark:bg-indigo-400 transition-all duration-300", location.pathname === '/about' ? "w-full" : "w-0 group-hover:w-full")}></span>
+            </Link>
+
+            <Link
+              to="/careers"
+              className={twMerge(
+                "relative font-medium transition-colors group flex items-center h-full",
+                location.pathname === '/careers' 
+                  ? "text-indigo-600 dark:text-indigo-400" 
+                  : "text-slate-600 hover:text-indigo-600 dark:text-slate-300 dark:hover:text-indigo-400"
+              )}
+            >
+              <span>Careers</span>
+              <span className={twMerge("absolute bottom-0 left-0 h-0.5 bg-indigo-600 dark:bg-indigo-400 transition-all duration-300", location.pathname === '/careers' ? "w-full" : "w-0 group-hover:w-full")}></span>
+            </Link>
+
+
             {navGroups.map((group) => (
               <div key={group.name} className="group h-full flex items-center">
                 {/* Notice NO relative class here. This is crucial for the dropdown to span the entire navbar width. */}
@@ -224,6 +243,19 @@ const Navbar = () => {
               </div>
             ))}
 
+            <Link
+              to="/contact"
+              className={twMerge(
+                "relative font-medium transition-colors group flex items-center h-full",
+                location.pathname === '/contact' 
+                  ? "text-indigo-600 dark:text-indigo-400" 
+                  : "text-slate-600 hover:text-indigo-600 dark:text-slate-300 dark:hover:text-indigo-400"
+              )}
+            >
+              <span>Contact</span>
+              <span className={twMerge("absolute bottom-0 left-0 h-0.5 bg-indigo-600 dark:bg-indigo-400 transition-all duration-300", location.pathname === '/contact' ? "w-full" : "w-0 group-hover:w-full")}></span>
+            </Link>
+            
             <div className="flex items-center space-x-4 border-l pl-4 border-slate-200 dark:border-slate-700 h-8">
               <ThemeToggle />
               <Link
@@ -250,13 +282,37 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white dark:bg-[#151A28] border-b border-slate-200 dark:border-slate-800 absolute top-full left-0 right-0 shadow-2xl max-h-[80vh] overflow-y-auto">
+        <div 
+          data-lenis-prevent="true"
+          className="lg:hidden bg-white dark:bg-[#151A28] border-b border-slate-200 dark:border-slate-800 absolute top-full left-0 right-0 shadow-2xl max-h-[calc(100dvh-5rem)] overflow-y-auto"
+        >
           <div className="px-4 pt-4 pb-6 space-y-2">
             <Link
               to="/"
               className="block px-4 py-3 rounded-xl text-base font-bold text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800/50"
             >
               Home
+            </Link>
+            
+            <Link
+              to="/about"
+              className="block px-4 py-3 rounded-xl text-base font-bold text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800/50"
+            >
+              About
+            </Link>
+
+            <Link
+              to="/careers"
+              className="block px-4 py-3 rounded-xl text-base font-bold text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800/50"
+            >
+              Careers
+            </Link>
+
+            <Link
+              to="/contact"
+              className="block px-4 py-3 rounded-xl text-base font-bold text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800/50"
+            >
+              Contact
             </Link>
             
             {navGroups.map((group) => (
