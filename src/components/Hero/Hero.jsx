@@ -11,7 +11,7 @@ const Hero = () => {
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-[90vh] flex items-center justify-center">
       
       {/* Background Grid & Overlays */}
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay dark:opacity-10 pointer-events-none z-0"></div>
+      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20  dark:opacity-10 pointer-events-none z-0"></div>
       <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-indigo-50/80 dark:from-[#1A1514] to-transparent pointer-events-none z-0"></div>
       <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-white dark:from-[#1A1514] to-transparent pointer-events-none z-0"></div>
 
@@ -23,7 +23,7 @@ const Hero = () => {
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
           className="text-[15rem] md:text-[20rem] font-bold tracking-tighter text-transparent"
-          style={{ WebkitTextStroke: "2px currentColor", color: "var(--color-slate-900)" }}
+          style={{ WebkitTextStroke: "2px currentColor", color: "var(--color-slate-900)", willChange: 'transform, opacity' }}
         >
           NEXORA
         </motion.div>

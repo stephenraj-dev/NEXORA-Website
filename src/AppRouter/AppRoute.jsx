@@ -31,7 +31,6 @@ const AppRoute = () => {
           <Route path="careers" element={<Careers />} />
           <Route path="contact" element={<Contact />} />
           
-          {/* New Enterprise MNC Pages */}
           <Route path="insights" element={<Insights />} />
           <Route path="case-studies" element={<CaseStudies />} />
           <Route path="partnerships" element={<Partnerships />} />
