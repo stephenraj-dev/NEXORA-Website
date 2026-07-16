@@ -12,11 +12,18 @@ const TrustedCompanies = () => {
         <RevealText as="p" className="text-sm font-semibold tracking-wider text-slate-500 dark:text-slate-400 uppercase" text="Trusted by innovative teams worldwide" />
       </div>
       <div className="relative flex overflow-x-hidden group cursor-pointer">
-        <div className="animate-marquee whitespace-nowrap flex items-center gap-16 py-4 group-hover:[animation-play-state:paused]">
-          {[...trustedCompanies, ...trustedCompanies].map((company, index) => (
-            <span key={index} className="text-xl md:text-2xl font-bold text-slate-300 dark:text-slate-700 font-heading hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">
-              {company}
-            </span>
+        <div className="animate-marquee whitespace-nowrap flex items-center gap-20 py-4 group-hover:[animation-play-state:paused]">
+          {[...trustedCompanies, ...trustedCompanies, ...trustedCompanies, ...trustedCompanies].map((company, index) => (
+            <a 
+              key={index} 
+              href={company.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`text-slate-400 dark:text-slate-600 transition-colors duration-300 cursor-pointer ${company.color}`}
+              aria-label={`Visit ${company.name} website`}
+            >
+              {company.logo}
+            </a>
           ))}
         </div>
       </div>
