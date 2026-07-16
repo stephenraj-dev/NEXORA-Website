@@ -112,7 +112,7 @@ const TrustCenter = () => {
               className="lg:w-1/2"
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl group hover-shimmer p-2 bg-gradient-to-br from-indigo-500/20 to-purple-500/20">
-                <img 
+                <img loading="lazy" decoding="async" 
                   src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
                   alt="Security Operations Center" 
                   className="w-full h-full object-cover rounded-2xl transform group-hover:scale-105 transition-transform duration-700"

@@ -68,7 +68,7 @@ const Insights = () => {
             className="group relative rounded-3xl overflow-hidden bg-white dark:bg-[#151A28] shadow-xl border border-slate-200 dark:border-slate-800 flex flex-col lg:flex-row hover-shimmer cursor-pointer"
           >
             <div className="lg:w-3/5 overflow-hidden">
-              <img src={featuredInsight.image} alt={featuredInsight.title} className="w-full h-full object-cover min-h-[400px] transform group-hover:scale-105 transition-transform duration-700" />
+              <img loading="lazy" decoding="async" src={featuredInsight.image} alt={featuredInsight.title} className="w-full h-full object-cover min-h-[400px] transform group-hover:scale-105 transition-transform duration-700" />
             </div>
             <div className="lg:w-2/5 p-10 lg:p-16 flex flex-col justify-center">
               <span className="inline-block px-4 py-1 rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 font-bold text-sm mb-6 w-max">
@@ -110,7 +110,7 @@ const Insights = () => {
                 className="group bg-white dark:bg-[#151A28] rounded-3xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-800 hover:border-indigo-500/50 transition-all hover-shimmer cursor-pointer flex flex-col h-full"
               >
                 <div className="h-60 overflow-hidden relative">
-                  <img src={insight.image} alt={insight.title} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                  <img loading="lazy" decoding="async" src={insight.image} alt={insight.title} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
                   <div className="absolute top-4 left-4">
                     <span className="inline-block px-3 py-1 rounded-full bg-white/90 dark:bg-black/80 backdrop-blur-sm text-slate-900 dark:text-white font-bold text-xs shadow-sm">
                       {insight.category}

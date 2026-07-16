@@ -94,7 +94,7 @@ const Products = () => {
                   className="flex-1 w-full"
                 >
                   <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] group hover-shimmer">
-                    <img 
+                    <img loading="lazy" decoding="async" 
                       src={product.image} 
                       alt={product.name} 
                       className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"

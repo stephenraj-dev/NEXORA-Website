@@ -55,6 +55,11 @@
     animation: floating 6s ease-in-out infinite;
   }
 
+  /* Custom Scrollbar for Chat Window */
+  .chat-scrollbar::-webkit-scrollbar {
+    width: 2px;
+  }
+
   /* Modern Pill Buttons with Sweep Animation */
   .modern-btn, .glossy-btn {
     position: relative;

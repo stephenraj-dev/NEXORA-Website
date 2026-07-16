@@ -60,7 +60,7 @@ const Partnerships = () => {
               >
                 <div className="h-48 overflow-hidden relative">
                   <div className="absolute inset-0 bg-indigo-900/20 mix-blend-multiply z-10"></div>
-                  <img src={partner.image} alt={partner.name} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                  <img loading="lazy" decoding="async" src={partner.image} alt={partner.name} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
                   <div className="absolute top-4 right-4 z-20">
                     <span className="inline-block px-3 py-1 rounded-full bg-white/90 dark:bg-black/80 backdrop-blur-sm text-slate-900 dark:text-white font-bold text-xs shadow-sm">
                       {partner.tier}

@@ -1,0 +1,120 @@
+/* robotAnimations.css */
+@keyframes robotFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes robotBreathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02, 0.98); }
+}
+
+@keyframes robotBlink {
+  0%, 96%, 98%, 100% { transform: scaleY(1); }
+  97%, 99% { transform: scaleY(0.1); }
+}
+
+@keyframes robotWalkBody {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-5px) rotate(5deg); }
+  50% { transform: translateY(0px) rotate(0deg); }
+  75% { transform: translateY(-5px) rotate(-5deg); }
+}
+
+@keyframes robotWave {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-40deg); }
+  40% { transform: rotate(10deg); }
+  60% { transform: rotate(-40deg); }
+  80% { transform: rotate(10deg); }
+}
+
+@keyframes robotDance {
+  0%, 100% { transform: translateY(0) scale(1); }
+  20% { transform: translateY(-15px) scale(1.05) rotate(15deg); }
+  40% { transform: translateY(0) scale(1) rotate(-15deg); }
+  60% { transform: translateY(-15px) scale(1.05) rotate(15deg); }
+  80% { transform: translateY(0) scale(1) rotate(-15deg); }
+}
+
+@keyframes shadowPulse {
+  0%, 100% { transform: scale(1); opacity: 0.2; }
+  50% { transform: scale(0.8); opacity: 0.1; }
+}
+
+.robot-shadow {
+  animation: shadowPulse 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.robot-idle .robot-body-wrapper {
+  animation: robotFloat 4s ease-in-out infinite, robotBreathe 3s ease-in-out infinite;
+}
+
+.robot-idle .robot-eyes-wrapper {
+  animation: robotBlink 5s infinite;
+}
+
+.robot-walking .robot-body-wrapper {
+  animation: robotWalkBody 0.6s linear infinite;
+}
+
+.robot-walking .robot-arm-left {
+  animation: robotWave 1s linear infinite;
+}
+.robot-walking .robot-arm-right {
+  transform-origin: 130px 140px;
+  animation: robotWave 1s linear infinite alternate-reverse;
+}
+
+.robot-walking .robot-shadow {
+  animation: shadowPulse 0.6s linear infinite;
+}
+
+.robot-dancing .robot-body-wrapper {
+  animation: robotDance 1.5s ease-in-out infinite;
+}
+.robot-dancing .robot-arm-left {
+  animation: robotWave 1.5s ease-in-out infinite;
+}
+.robot-dancing .robot-arm-right {
+  transform-origin: 130px 140px;
+  animation: robotWave 1.5s ease-in-out infinite alternate-reverse;
+}
+
+.robot-waving .robot-body-wrapper {
+  animation: robotFloat 4s ease-in-out infinite;
+}
+
+.robot-waving .robot-arm-left {
+  transform-origin: 70px 140px;
+  animation: robotWave 1.5s ease-in-out infinite;
+}
+.robot-waving .robot-arm-right {
+  transform-origin: 130px 140px;
+  animation: robotWave 1.5s ease-in-out infinite;
+}
+
+.robot-thinking .robot-body-wrapper {
+  animation: robotFloat 4s ease-in-out infinite;
+}
+.robot-thinking .robot-arm-right {
+  transform-origin: 130px 140px;
+  animation: robotWave 3s ease-in-out infinite alternate;
+}
+.robot-thinking .robot-head {
+  transform: rotate(-10deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+.robot-celebrating .robot-body-wrapper {
+  animation: robotDance 1.2s ease-in-out infinite;
+}
+.robot-celebrating .robot-arm-left,
+.robot-celebrating .robot-arm-right {
+  animation: robotWave 1.2s ease-in-out infinite;
+  transform-origin: 70px 140px;
+}
+.robot-celebrating .robot-arm-right {
+  transform-origin: 130px 140px;
+}

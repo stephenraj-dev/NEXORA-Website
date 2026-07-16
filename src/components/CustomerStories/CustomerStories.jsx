@@ -123,7 +123,7 @@ const CustomerStories = () => {
             >
               {/* Background Image with Zoom on Hover */}
               <div className="absolute inset-0 w-full h-full">
-                <img 
+                <img loading="lazy" decoding="async" 
                   src={story.image} 
                   alt={story.name} 
                   className="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700 ease-out"

@@ -75,7 +75,7 @@ const CaseStudies = () => {
                   {/* Image Side */}
                   <div className="w-full lg:w-1/2">
                     <div className="relative group rounded-3xl overflow-hidden shadow-2xl hover-shimmer aspect-[4/3]">
-                      <img src={study.image} alt={study.client} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                      <img loading="lazy" decoding="async" src={study.image} alt={study.client} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-80"></div>
                       <div className="absolute bottom-8 left-8 right-8">
                         <span className="inline-block px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-white font-bold text-xs mb-3 border border-white/30">

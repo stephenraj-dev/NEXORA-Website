@@ -84,7 +84,7 @@ const Industries = () => {
                   className="group bg-white dark:bg-[#151A28] rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-2xl transition-all duration-300 hover-shimmer flex flex-col"
                 >
                   <div className="h-48 overflow-hidden relative">
-                    <img 
+                    <img loading="lazy" decoding="async" 
                       src={ind.image} 
                       alt={ind.name}
                       className="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700 ease-out" 

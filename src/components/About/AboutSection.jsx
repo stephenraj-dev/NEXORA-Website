@@ -36,7 +36,7 @@ const AboutSection = () => {
             className="relative"
           >
             <div className="relative aspect-square md:aspect-video lg:aspect-square rounded-3xl overflow-hidden shadow-2xl group hover-shimmer">
-               <img 
+               <img loading="lazy" decoding="async" 
                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
                  alt="NEXORA Team Collaboration" 
                  className="w-full h-full object-cover"

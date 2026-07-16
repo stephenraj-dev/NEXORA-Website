@@ -77,7 +77,7 @@ const About = () => {
               className="lg:w-1/2"
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl group hover-shimmer aspect-square max-w-md mx-auto">
-                <img 
+                <img loading="lazy" decoding="async" 
                   src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
                   alt="NEXORA Founders" 
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
@@ -151,7 +151,7 @@ const About = () => {
                 className="group relative overflow-hidden rounded-3xl hover-shimmer"
               >
                 <div className="aspect-[3/4]">
-                  <img src={leader.image} alt={leader.name} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                  <img loading="lazy" decoding="async" src={leader.image} alt={leader.name} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform">
