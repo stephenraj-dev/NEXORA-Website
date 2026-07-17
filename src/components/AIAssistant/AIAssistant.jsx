@@ -7,6 +7,7 @@ const AIAssistant = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [animationState, setAnimationState] = useState('idle'); // idle, walking, dancing, celebrating, waving
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   useEffect(() => {
     // Handle scroll velocity and sections for animations
@@ -70,12 +71,22 @@ const AIAssistant = () => {
       }
     }, 5000);
 
+    // Listen to Mobile Menu events from Navbar
+    const handleMenuOpen = () => setIsMobileMenuOpen(true);
+    const handleMenuClosed = () => setIsMobileMenuOpen(false);
+    window.addEventListener('mobileMenuOpen', handleMenuOpen);
+    window.addEventListener('mobileMenuClosed', handleMenuClosed);
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
       clearTimeout(scrollTimeout);
       clearInterval(idleInterval);
+      window.removeEventListener('mobileMenuOpen', handleMenuOpen);
+      window.removeEventListener('mobileMenuClosed', handleMenuClosed);
     };
   }, [animationState, isOpen]);
+
+  if (isMobileMenuOpen) return null;
 
   return (
     <>

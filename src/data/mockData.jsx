@@ -89,7 +89,7 @@ export const trustedCompanies = [
     ),
     color: 'hover:text-[#4285F4]'
   },
-  {
+  {  
     name: 'Shopify',
     url: 'https://www.shopify.com',
     logo: (
@@ -120,7 +120,7 @@ export const trustedCompanies = [
     color: 'hover:text-[#4A154B]'
   }
 ];
-
+z
 export const whyChooseUsData = [
   {
     title: 'Engineering Excellence',

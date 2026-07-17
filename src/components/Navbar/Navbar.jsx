@@ -11,6 +11,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openMobileGroup, setOpenMobileGroup] = useState(null);
+  const [openDesktopGroup, setOpenDesktopGroup] = useState(null);
   const location = useLocation();
 
   const { scrollYProgress } = useScroll();
@@ -39,14 +40,17 @@ const Navbar = () => {
   useEffect(() => {
     setMobileMenuOpen(false);
     setOpenMobileGroup(null);
+    setOpenDesktopGroup(null);
   }, [location]);
 
   // Prevent background scrolling when mobile menu is open
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
+      window.dispatchEvent(new Event('mobileMenuOpen'));
     } else {
       document.body.style.overflow = 'unset';
+      window.dispatchEvent(new Event('mobileMenuClosed'));
     }
     return () => {
       document.body.style.overflow = 'unset';
@@ -209,20 +213,35 @@ const Navbar = () => {
 
 
             {navGroups.map((group) => (
-              <div key={group.name} className="group h-full flex items-center">
+              <div 
+                key={group.name} 
+                className="group h-full flex items-center"
+                onMouseEnter={() => setOpenDesktopGroup(group.name)}
+                onMouseLeave={() => setOpenDesktopGroup(null)}
+              >
                 {/* Notice NO relative class here. This is crucial for the dropdown to span the entire navbar width. */}
-                <button className={twMerge(
+                <button 
+                  onClick={() => setOpenDesktopGroup(openDesktopGroup === group.name ? null : group.name)}
+                  className={twMerge(
                   "flex items-center gap-1 font-medium transition-colors h-full",
                   isActiveGroup(group.columns) 
                     ? "text-indigo-600 dark:text-indigo-400" 
                     : "text-slate-600 hover:text-indigo-600 dark:text-slate-300 dark:hover:text-indigo-400"
                 )}>
                   {group.name}
-                  <ChevronDown size={16} className="transition-transform duration-300 group-hover:rotate-180" />
+                  <ChevronDown size={16} className={twMerge(
+                    "transition-transform duration-300",
+                    openDesktopGroup === group.name ? "rotate-180" : "group-hover:rotate-180"
+                  )} />
                 </button>
                 
                 {/* Stripe-style Mega Menu */}
-                <div className="absolute left-0 right-0 top-full opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 pb-4">
+                <div className={twMerge(
+                  "absolute left-0 right-0 top-full transition-all duration-300 pb-4",
+                  openDesktopGroup === group.name
+                    ? "opacity-100 visible translate-y-0"
+                    : "opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0"
+                )}>
                   <div className="bg-white dark:bg-[#111827] rounded-3xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)] border border-slate-200/60 dark:border-slate-800 flex overflow-hidden">
                     {group.columns.map((col, idx) => (
                       <div key={col.title} className="flex-1 p-10 border-r border-slate-100 dark:border-slate-800/60 last:border-0 relative">
