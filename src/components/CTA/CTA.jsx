@@ -17,7 +17,7 @@ const CTA = () => {
           transition={{ duration: 0.6 }}
           className="rounded-[2.5rem] bg-linear-to-br from-indigo-600 to-purple-700 dark:from-indigo-900 dark:to-purple-900 p-12 md:p-16 text-center relative overflow-hidden"
         >
-          <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 "></div>
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')] opacity-20 "></div>
           
           <div className="relative z-10">
             <RevealText as="h2" className="text-3xl md:text-5xl font-bold text-white mb-6 font-heading" text="Ready to build your next software product?" />

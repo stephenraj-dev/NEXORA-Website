@@ -11,7 +11,7 @@ const Hero = () => {
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-[90vh] flex items-center justify-center">
       
       {/* Background Grid & Overlays */}
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20  dark:opacity-10 pointer-events-none z-0"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')] opacity-20  dark:opacity-10 pointer-events-none z-0"></div>
       <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-indigo-50/80 dark:from-[#1A1514] to-transparent pointer-events-none z-0"></div>
       <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-white dark:from-[#1A1514] to-transparent pointer-events-none z-0"></div>
 

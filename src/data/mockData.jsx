@@ -120,7 +120,7 @@ export const trustedCompanies = [
     color: 'hover:text-[#4A154B]'
   }
 ];
-z
+
 export const whyChooseUsData = [
   {
     title: 'Engineering Excellence',
